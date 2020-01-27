@@ -93,7 +93,6 @@ class MultiSelect extends Component {
   };
 
   reset() {
-    console.log('reset');
     const { all, validFormatted, notAvailableFormatted } = this.getAvailableShifts([], this.props.globalShiftList);
     this.setState({
       allShifts: all,
