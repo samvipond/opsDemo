@@ -1,24 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MultiSelect from './MultiSelect';
+
+const globalShiftList = [
+	{
+		start: '0000',
+		end: '2359'
+	},
+	{
+		start: '0600',
+		end: '1800'
+	},
+	{
+		start: '0000',
+		end: '1200'
+	},
+	{
+		start: '0600',
+		end: '1200'
+	},
+	{
+		start: '1800',
+		end: '2359'
+	},
+	{
+		start: '0000',
+		end: '0600'
+	},
+	{
+		start: '1200',
+		end: '2359'
+	},
+	{
+		start: '1200',
+		end: '1800'
+	}
+];
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1>Demo</h1>
+      <MultiSelect
+        globalShiftList={globalShiftList} />
     </div>
   );
 }
